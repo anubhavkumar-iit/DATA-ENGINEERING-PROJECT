@@ -1,0 +1,41 @@
+[33mcommit 0b5977054ca6ddde676117c1fced8eda0dc5f198[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmilestone3-development[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Shambhavi <zda24b005@gmail.com>
+Date:   Wed May 20 14:34:59 2026 +0300
+
+    Added analytical aggregation queries for validation
+
+[33mcommit e0a52faaaa66221620028a619c6d7b3ac9f089e8[m
+Author: Shambhavi <zda24b005@gmail.com>
+Date:   Wed May 20 14:34:29 2026 +0300
+
+    Implemented ETL pipeline for parquet ingestion
+
+[33mcommit 387728364ebdbfea232b9b742e2175e2b4460d9a[m
+Author: Shambhavi <zda24b005@gmail.com>
+Date:   Wed May 20 14:34:04 2026 +0300
+
+    Created dimension tables for stations pollutants and time
+
+[33mcommit 58d94b98388f54ded96b94d8b35c05924b11c30d[m
+Author: Shambhavi <zda24b005@gmail.com>
+Date:   Wed May 20 14:33:45 2026 +0300
+
+    Initialized SQLite database configuration
+
+[33mcommit 63b38e9d3611857715a0e5abbbe1c38a1c24417c[m
+Author: Shambhavi <zda24b005@gmail.com>
+Date:   Wed May 20 12:17:31 2026 +0300
+
+    Completed Milestone 1 ingestion pipeline
+
+[33mcommit a1c750eea52558f2b35b4924edfa70d6bb90f768[m
+Author: Shambhavi <zda24b005@gmail.com>
+Date:   Wed May 20 12:12:13 2026 +0300
+
+    Completed Milestone 2 star schema and ETL pipeline
+
+[33mcommit 2c24298e650d2934b5e01d136e86c02bf8d56388[m
+Author: Shambhavi <zda24b005@gmail.com>
+Date:   Wed May 20 12:07:59 2026 +0300
+
+    Created unified project structure
