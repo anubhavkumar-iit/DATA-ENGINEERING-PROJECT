@@ -62,3 +62,31 @@ Used for:
 ## Data Serving
 
 The cleaned and transformed dataset is stored in a warehouse-friendly structure that supports aggregation and reporting queries. Users interact with analytical views rather than raw data, improving performance and usability.
+
+## Data Flow
+
+1. Raw Air Quality Dataset (Parquet)
+2. Spark Ingestion Pipeline
+3. Data Profiling and Quality Assessment
+4. Batch Data Cleaning
+5. Feature Engineering
+6. Star Schema Warehouse
+7. Analytical Queries
+8. End User Dashboards and Reports
+
+## Real-World Usage
+
+The cleaned and transformed dataset can be used by:
+
+- Environmental agencies to monitor pollution trends.
+- City planners to identify high-risk locations.
+- Researchers analyzing air quality patterns.
+- Public dashboards showing pollutant levels over time.
+- Policy makers evaluating environmental interventions.
+
+## Example Business Questions
+
+1. Which station recorded the highest average pollutant concentration?
+2. How do pollution levels vary across months?
+3. Which pollutants contribute most to poor air quality?
+4. Which locations show improving or worsening trends?
