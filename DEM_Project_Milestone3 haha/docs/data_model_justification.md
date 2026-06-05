@@ -32,6 +32,10 @@
 - Queries executed on the cleaned dataset (e.g., average pollutant by station or month) are simple and fast due to the dimensional model.
 - Reduces storage for repeated descriptive attributes while preserving analytical efficiency.
 
+## Future Scalability Considerations
+
+The selected star schema can be extended to support additional environmental datasets such as weather conditions, traffic patterns, and industrial activity indicators. New dimension tables can be integrated without major changes to the fact table structure, making the design suitable for future analytical expansion.
+
 ## References
 1. Kimball, R., & Ross, M. *The Data Warehouse Toolkit*, 3rd Edition.
 2. Chaudhuri, S., & Dayal, U. "An Overview of Data Warehousing and OLAP Technology," *ACM SIGMOD*, 1997.
