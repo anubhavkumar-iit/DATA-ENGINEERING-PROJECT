@@ -90,3 +90,21 @@ The cleaned and transformed dataset can be used by:
 2. How do pollution levels vary across months?
 3. Which pollutants contribute most to poor air quality?
 4. Which locations show improving or worsening trends?
+
+
+## End User Application
+
+The cleaned air quality dataset can be used to build an Air Quality Monitoring Dashboard. The dashboard would allow users to:
+
+- Compare pollution levels across monitoring stations.
+- Track monthly and seasonal pollution trends.
+- Identify high-risk locations with consistently poor air quality.
+- Analyze pollutant concentration changes over time.
+- Generate reports for environmental agencies and policy makers.
+
+### Example Dashboard Metrics
+
+- Average pollutant concentration by station
+- Monthly pollution trends
+- Top polluted locations
+- Pollutant distribution analysis
