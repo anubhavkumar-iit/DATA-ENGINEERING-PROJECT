@@ -34,6 +34,9 @@ Inmon emphasizes the importance of organizing data for decision support and anal
 **Relevance to our project:**
 The air quality dataset is used primarily for analysis and reporting, making a warehouse-oriented dimensional design appropriate.
 
+## Relevance to This Project
+
+The reviewed literature supports the use of dimensional modeling and data warehousing techniques for analytical workloads. The selected star schema aligns with established best practices for reporting and OLAP systems.
 
 
 ## Conclusion

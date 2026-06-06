@@ -24,3 +24,18 @@ The query aggregated millions of records by year and month, demonstrating the su
 ## Conclusion
 
 The transformed dataset supports analytical workloads involving aggregation, filtering, grouping, and trend analysis. These workloads align with the intended use of a Star Schema and justify the selected data model.
+
+## Impact of Data Cleaning
+
+The cleaning pipeline removed invalid, duplicate, and inconsistent records from the dataset. This improved the reliability of analytical queries and reduced the risk of misleading insights.
+
+### Benefits
+
+- Improved query accuracy
+- More consistent pollutant measurements
+- Better aggregation results
+- Reduced noise in analytical reporting
+
+## End User Benefits
+
+The cleaned dataset enables environmental agencies and researchers to make more reliable decisions based on air quality trends. Dashboards built on top of the warehouse can provide trustworthy pollution statistics and historical comparisons.
