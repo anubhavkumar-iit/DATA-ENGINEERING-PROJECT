@@ -1,41 +1,54 @@
 # Literature Review Supporting the Selected Data Model
 
-## 1. Kimball & Ross – The Data Warehouse Toolkit
+<!-- anchor: intro -->
+## Introduction
 
-Kimball and Ross advocate the use of dimensional modeling and Star Schemas for analytical workloads. They argue that Star Schemas simplify query design, improve understandability, and provide efficient aggregation for business intelligence applications.
+This review examines the academic and technical literature that informed the data modelling decisions made in this project. The Delhi air quality dataset contains 8.8 million rows spanning 15 monitoring stations, 13 pollutant types, and hourly readings over multiple years. The literature consistently points to dimensional modelling and Star Schemas as the most appropriate design for this class of analytical workload.
 
-**Relevance to our project:**
-Our air quality dataset contains millions of measurements that are repeatedly analyzed by station, pollutant, and time. The Star Schema provides an intuitive structure for these analytical queries.
+---
 
+<!-- anchor: theme-dimensional -->
+## Theme 1 — Dimensional Modelling as the Foundation for Analytical Systems
 
+**Kimball & Ross — The Data Warehouse Toolkit**
 
-## 2. Chaudhuri & Dayal (1997) – An Overview of Data Warehousing and OLAP Technology
+Kimball and Ross established dimensional modelling as the standard approach for analytical data systems. They argue that Star Schemas simplify query design, improve understandability, and deliver efficient aggregation for business intelligence applications.
 
-This paper discusses the role of data warehouses in supporting analytical workloads and highlights multidimensional data models as a foundation for efficient OLAP operations.
+*Relevance:* Our dataset has clear, repeated descriptive attributes — station name, city, state, pollutant type — that repeat across millions of fact rows. Normalising these into dimension tables (`dim_station`, `dim_pollutant`, `dim_time`) directly follows Kimball's prescription and eliminates update anomalies.
 
-**Relevance to our project:**
-The project requires aggregation and trend analysis over 8.8 million records. A dimensional model aligns well with these OLAP-style queries.
+**Inmon — Building the Data Warehouse**
 
+Inmon emphasises organising data for decision support and analytical processing rather than transactional processing, arguing that warehouse-oriented design improves long-term maintainability.
 
+*Relevance:* The air quality dataset is used purely for analysis and reporting — no transactional writes after ingestion. A warehouse-oriented design is therefore the correct choice.
 
-## 3. Star Schema Benchmark (O'Neil et al.)
+---
 
-The Star Schema Benchmark demonstrates that dimensional schemas are highly effective for analytical workloads involving filtering, grouping, and aggregation.
+<!-- anchor: theme-olap -->
+## Theme 2 — OLAP Query Patterns and Multidimensional Models
 
-**Relevance to our project:**
-Typical project queries such as average pollutant concentration by station or monthly pollutant trends match the benchmark's analytical workload characteristics.
+**Chaudhuri & Dayal (1997) — An Overview of Data Warehousing and OLAP Technology**
 
+This foundational paper discusses the role of data warehouses in supporting analytical workloads and highlights multidimensional data models as the basis for efficient OLAP operations including roll-up, drill-down, slice, and dice.
 
+*Relevance:* The three core analytical queries in this project — average pollutant by station, average by pollutant type, and monthly trend analysis — are classic OLAP GROUP BY patterns. The dimensional model maps directly to these operations.
 
-## 4. Inmon – Building the Data Warehouse
+---
 
-Inmon emphasizes the importance of organizing data for decision support and analytical processing rather than transactional processing.
+<!-- anchor: theme-benchmark -->
+## Theme 3 — Empirical Evidence for Star Schema Performance
 
-**Relevance to our project:**
-The air quality dataset is used primarily for analysis and reporting, making a warehouse-oriented dimensional design appropriate.
+**Star Schema Benchmark — O'Neil et al.**
 
+The Star Schema Benchmark provides empirical evidence that dimensional schemas outperform normalised schemas for analytical workloads involving filtering, grouping, and aggregation across large fact tables.
 
+*Relevance:* Queries such as average pollutant concentration by station or monthly pollutant trends across 8.8 million records match the benchmark's workload characteristics. The benchmark supports the choice of SQLite star schema over a flat denormalised table or a document store.
 
+---
+
+<!-- anchor: conclusion -->
 ## Conclusion
 
-The literature consistently supports dimensional modeling and Star Schemas for large-scale analytical datasets. Given the project's analytical query patterns, large record count, and repeated descriptive attributes, the Star Schema is the most suitable data model.
+The literature reviewed here converges on a single recommendation: for large-scale, read-heavy, multi-dimensional analytical datasets, the Star Schema dimensional model is the most suitable design. Given the project's 8.8 million fact rows, fixed station and pollutant vocabularies, and GROUP BY-heavy query patterns, this design is both theoretically justified and empirically validated.
+
+
