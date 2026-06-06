@@ -3,7 +3,7 @@
 ## Folder Structure
 
 ```
-team5-delhi-aq/
+DATA-ENGINEERING-PROJECT/
 |-- DEM_Project_Milestone1/
 |   |-- data/ingestion_layer/partitioned_data/ (partitioned parquet: year=/month=)
 |   |-- logs/ingestion_logs.txt
