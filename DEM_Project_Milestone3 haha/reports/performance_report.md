@@ -39,3 +39,46 @@ The cleaning pipeline removed invalid, duplicate, and inconsistent records from 
 ## End User Benefits
 
 The cleaned dataset enables environmental agencies and researchers to make more reliable decisions based on air quality trends. Dashboards built on top of the warehouse can provide trustworthy pollution statistics and historical comparisons.
+
+
+## Query Performance Analysis
+
+The dimensional model simplified analytical queries by reducing the need for repeated descriptive attributes in the fact table.
+
+Observed benefits:
+
+- Faster aggregation queries on pollutant measurements
+- Simpler filtering by station and pollutant dimensions
+- Improved readability of analytical SQL queries
+- Better support for dashboard-oriented workloads
+
+## Analytical Insights
+
+The warehouse structure enables efficient generation of:
+
+- Monthly pollution trends
+- Station-wise pollutant comparisons
+- Pollutant contribution analysis
+- Historical trend reporting
+
+## Data Quality Validation
+
+Validation checks performed:
+
+- Null value detection
+- Duplicate record identification
+- Schema consistency verification
+- Dimension key validation
+
+These checks improve confidence in downstream analytics and reporting.
+
+## Data Quality Validation
+
+Several validation checks were performed after data cleaning:
+
+- Missing value detection and treatment
+- Duplicate record analysis
+- Schema consistency verification
+- Foreign key validation between fact and dimension tables
+
+These checks improve confidence in analytical reporting and downstream decision-making.
