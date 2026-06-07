@@ -42,3 +42,9 @@ The reviewed literature supports the use of dimensional modeling and data wareho
 ## Conclusion
 
 The literature consistently supports dimensional modeling and Star Schemas for large-scale analytical datasets. Given the project's analytical query patterns, large record count, and repeated descriptive attributes, the Star Schema is the most suitable data model.
+
+## Relevance to Warehouse Design
+
+The reviewed studies highlight the importance of dimensional modeling for analytical systems. A star schema was selected because it supports efficient aggregation, simplifies reporting queries, and improves usability for decision-support workloads.
+
+The literature also emphasizes the importance of data cleaning before analytical processing to ensure reliable insights.
