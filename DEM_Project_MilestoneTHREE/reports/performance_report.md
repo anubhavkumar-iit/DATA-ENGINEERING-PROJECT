@@ -24,3 +24,7 @@ The query aggregated millions of records by year and month, demonstrating the su
 ## Conclusion
 
 The transformed dataset supports analytical workloads involving aggregation, filtering, grouping, and trend analysis. These workloads align with the intended use of a Star Schema and justify the selected data model.
+
+## Transformation Validation Checks
+
+Post-transformation validation confirms that all imputed air-quality attributes contain zero missing values after processing. Validation checks are executed before report generation to ensure dataset completeness.
