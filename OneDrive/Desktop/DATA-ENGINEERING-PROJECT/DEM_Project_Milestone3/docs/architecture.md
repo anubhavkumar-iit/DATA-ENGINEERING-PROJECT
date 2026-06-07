@@ -148,3 +148,6 @@ Version control with per-person feature branches (`anubhav/`, `shambhavi/`, `mil
 3. Study pollutant behaviour over time using AQI categories.
 4. Generate environmental monitoring reports from cleaned data.
 5. Support policy decision-making using aggregated analytics.
+
+## Updated
+Milestone 3 documentation completed 
