@@ -68,3 +68,7 @@ The cleaned and transformed dataset is stored in a warehouse-friendly structure 
 
 Implemented Spark batch transformation workflow including parquet ingestion, data quality validation, missing-value imputation, and partitioned output generation for downstream analytics.
 
+
+### Empty Partition Handling
+
+The batch transformation workflow skips station partitions that contain zero valid records after validation. Empty parquet outputs are not written, and a warning is logged to avoid downstream processing issues.
