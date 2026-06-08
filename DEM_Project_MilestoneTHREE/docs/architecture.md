@@ -72,3 +72,13 @@ Implemented Spark batch transformation workflow including parquet ingestion, dat
 ### Empty Partition Handling
 
 The batch transformation workflow skips station partitions that contain zero valid records after validation. Empty parquet outputs are not written, and a warning is logged to avoid downstream processing issues.
+
+### Pipeline Execution Stages
+
+1. Load Source Data
+2. Schema Validation
+3. Missing Value Imputation
+4. Partitioned Output Generation
+5. Quality Assertion Checks
+
+Each stage is documented independently to improve maintainability and reviewer readability.
