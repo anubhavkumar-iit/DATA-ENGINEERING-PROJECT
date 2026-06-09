@@ -1,0 +1,11 @@
+INGESTION PIPELINE LOG
+======================
+
+rows_processed      : 8844800
+columns             : 22
+partition_columns   : year, month
+output_path         : /content/ingestion_layer/partitioned_data
+duplicates_removed  : 0
+
+pipeline_status     : SUCCESS
+log_format_version  : 2
