@@ -1,5 +1,17 @@
 # Performance Evaluation
 
+## Transformation Pipeline
+
+The batch transformation workflow consisted of the following stages:
+
+1. Load partitioned parquet dataset into Spark.
+2. Perform data profiling and missing value analysis.
+3. Apply data cleaning and imputation rules.
+4. Generate transformed analytical dataset.
+5. Validate data quality improvements.
+6. Store cleaned output for downstream analytical processing.
+
+
 ## Query 1: Average Pollutant Value by Station
 
 Purpose: Compare air quality measurements across monitoring stations.
@@ -82,3 +94,41 @@ Several validation checks were performed after data cleaning:
 - Foreign key validation between fact and dimension tables
 
 These checks improve confidence in analytical reporting and downstream decision-making.
+
+## Relevance to Project Design
+
+The reviewed literature supports the use of dimensional modeling for analytical workloads. The selected star schema reduces query complexity while improving reporting efficiency for large datasets.
+
+The findings also support the use of batch data cleaning and preprocessing before warehouse loading to improve data quality.
+
+
+## Spark Configuration
+
+| Parameter          | Value        |
+| ------------------ | ------------ |
+| Executor Memory    | ACTUAL_VALUE |
+| Driver Memory      | ACTUAL_VALUE |
+| Shuffle Partitions | ACTUAL_VALUE |
+
+## Transformation Pipeline
+
+1. Load partitioned parquet dataset
+2. Profile missing values and data quality issues
+3. Perform batch data cleaning and imputation
+4. Generate derived features
+5. Write cleaned dataset for analytical processing
+
+## Execution Time Benchmarks
+
+| Stage               | Execution Time (seconds) |
+| ------------------- | ------------------------ |
+| Data Loading        | ACTUAL_VALUE             |
+| Data Profiling      | ACTUAL_VALUE             |
+| Data Cleaning       | ACTUAL_VALUE             |
+| Feature Engineering | ACTUAL_VALUE             |
+| Output Write        | ACTUAL_VALUE             |
+| Total Pipeline Time | ACTUAL_VALUE             |
+
+### Benchmark Summary
+
+The Spark pipeline successfully processed the air quality dataset and produced a cleaned analytical dataset suitable for warehouse loading and reporting.
