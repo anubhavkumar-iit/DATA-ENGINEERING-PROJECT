@@ -34,10 +34,12 @@ st.set_page_config(
 inject_custom_css()
 
 # ─── Constants ────────────────────────────────────────────────────────────────
-PARQUET_BASE = Path(
-    "/Users/anubhav/Documents/DATA-ENGINEERING-PROJECT"
-    "/DEM_Project_MilestoneONE/data/ingestion_layer"
-    "/ingestion_layer/ingestion_layer/partitioned_data"
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+PARQUET_BASE = (
+    BASE_DIR
+    / "data"
+    / "partitioned_data"
 )
 
 STATION_REGION = {
